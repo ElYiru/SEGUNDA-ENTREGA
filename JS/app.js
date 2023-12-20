@@ -55,6 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const nombre = button.dataset.nombre;
       const duracion = button.dataset.duracion;
       const artista = button.dataset.artista;
+      Toastify({
+        text: `La canción ${nombre} fue añadida a la playlist`,
+        duration: 3000,  // Duración en milisegundos
+        gravity: 'bottom',  // Posición de la notificación (top, bottom, center)
+        position: 'right',  // Aliniación de la notificación (left, right, center)
+      }).showToast();
       const cartModalBody = document.querySelector('#playlistModal .modal-body');
       cartModalBody.innerHTML += `<p>${nombre} - ${artista} (${duracion})</p>`;
 
